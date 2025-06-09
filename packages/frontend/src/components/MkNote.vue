@@ -847,13 +847,13 @@ function emitUpdReaction(emoji: string, delta: number) {
 }
 
 .collapsedRenoteTargetText {
-	overflow: hidden;
-	flex-shrink: 1;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	font-size: 90%;
-	opacity: 0.7;
-	cursor: pointer;
+       overflow: hidden;
+       flex-shrink: 1;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       font-size: inherit;
+       opacity: 0.7;
+       cursor: pointer;
 
 	&:hover {
 		text-decoration: underline;
