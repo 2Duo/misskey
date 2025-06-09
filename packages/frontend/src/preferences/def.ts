@@ -160,9 +160,9 @@ export const PREF_DEF = definePreferences({
 	reportError: {
 		default: false,
 	},
-	collapseRenotes: {
-		default: true,
-	},
+       collapseRenotes: {
+               default: false,
+       },
 	menu: {
 		default: [
 			'notifications',

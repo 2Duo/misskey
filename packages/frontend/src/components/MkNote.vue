@@ -309,12 +309,7 @@ const translation = ref<Misskey.entities.NotesTranslateResponse | null>(null);
 const translating = ref(false);
 const showTicker = (prefer.s.instanceTicker === 'always') || (prefer.s.instanceTicker === 'remote' && appearNote.user.instance);
 const canRenote = computed(() => ['public', 'home'].includes(appearNote.visibility) || (appearNote.visibility === 'followers' && appearNote.userId === $i?.id));
-const renoteCollapsed = ref(
-	prefer.s.collapseRenotes && isRenote && (
-		($i && ($i.id === note.userId || $i.id === appearNote.userId)) || // `||` must be `||`! See https://github.com/misskey-dev/misskey/issues/13131
-		($appearNote.myReaction != null)
-	),
-);
+const renoteCollapsed = ref(false);
 
 const pleaseLoginContext = computed<OpenOnRemoteOptions>(() => ({
 	type: 'lookup',
@@ -847,13 +842,13 @@ function emitUpdReaction(emoji: string, delta: number) {
 }
 
 .collapsedRenoteTargetText {
-	overflow: hidden;
-	flex-shrink: 1;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	font-size: 90%;
-	opacity: 0.7;
-	cursor: pointer;
+       overflow: hidden;
+       flex-shrink: 1;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       font-size: inherit;
+       opacity: 0.7;
+       cursor: pointer;
 
 	&:hover {
 		text-decoration: underline;
@@ -978,10 +973,11 @@ function emitUpdReaction(emoji: string, delta: number) {
 }
 
 .quoteNote {
-	padding: 16px;
-	border: dashed 1px var(--MI_THEME-renote);
-	border-radius: 8px;
-	overflow: clip;
+        padding: 16px;
+        border: dashed 1px var(--MI_THEME-renote);
+        border-radius: 8px;
+        overflow: clip;
+        font-size: inherit;
 }
 
 .channel {
@@ -1124,9 +1120,10 @@ function emitUpdReaction(emoji: string, delta: number) {
 }
 
 @container (max-width: 250px) {
-	.quoteNote {
-		padding: 12px;
-	}
+        .quoteNote {
+                padding: 12px;
+                font-size: inherit;
+        }
 }
 
 .muted {
