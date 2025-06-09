@@ -349,10 +349,11 @@ const collapsed = ref(appearNote.value.cw == null && isLong);
 }
 
 .quoteNote {
-	padding: 16px;
-	border: dashed 1px var(--MI_THEME-renote);
-	border-radius: 8px;
-	overflow: clip;
+        padding: 16px;
+        border: dashed 1px var(--MI_THEME-renote);
+        border-radius: 8px;
+        overflow: clip;
+        font-size: inherit;
 }
 
 .channel {

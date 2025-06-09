@@ -847,13 +847,13 @@ function emitUpdReaction(emoji: string, delta: number) {
 }
 
 .collapsedRenoteTargetText {
-	overflow: hidden;
-	flex-shrink: 1;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	font-size: 90%;
-	opacity: 0.7;
-	cursor: pointer;
+       overflow: hidden;
+       flex-shrink: 1;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       font-size: inherit;
+       opacity: 0.7;
+       cursor: pointer;
 
 	&:hover {
 		text-decoration: underline;
@@ -978,10 +978,11 @@ function emitUpdReaction(emoji: string, delta: number) {
 }
 
 .quoteNote {
-	padding: 16px;
-	border: dashed 1px var(--MI_THEME-renote);
-	border-radius: 8px;
-	overflow: clip;
+        padding: 16px;
+        border: dashed 1px var(--MI_THEME-renote);
+        border-radius: 8px;
+        overflow: clip;
+        font-size: inherit;
 }
 
 .channel {
@@ -1124,9 +1125,10 @@ function emitUpdReaction(emoji: string, delta: number) {
 }
 
 @container (max-width: 250px) {
-	.quoteNote {
-		padding: 12px;
-	}
+        .quoteNote {
+                padding: 12px;
+                font-size: inherit;
+        }
 }
 
 .muted {
