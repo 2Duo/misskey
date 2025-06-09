@@ -160,10 +160,10 @@ export const store = markRaw(new Pizzax('base', {
 		where: 'account',
 		default: true,
 	},
-	collapseRenotes: {
-		where: 'account',
-		default: true,
-	},
+       collapseRenotes: {
+               where: 'account',
+               default: false,
+       },
 	rememberNoteVisibility: {
 		where: 'account',
 		default: false,
