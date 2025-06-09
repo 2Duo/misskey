@@ -442,10 +442,11 @@ const isDeleted = ref(false);
 }
 
 .quoteNote {
-	padding: 16px;
-	border: dashed 1px var(--MI_THEME-renote);
-	border-radius: 8px;
-	overflow: clip;
+        padding: 16px;
+        border: dashed 1px var(--MI_THEME-renote);
+        border-radius: 8px;
+        overflow: clip;
+        font-size: inherit;
 }
 
 .channel {
@@ -591,9 +592,10 @@ const isDeleted = ref(false);
 }
 
 @container (max-width: 250px) {
-	.quoteNote {
-		padding: 12px;
-	}
+        .quoteNote {
+                padding: 12px;
+                font-size: inherit;
+        }
 }
 
 .reactionOmitted {
